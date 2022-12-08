@@ -4,7 +4,7 @@ import java.lang.reflect.Constructor;
 
 public class Instancia {
 	
-	public Object startInstancia(String entrada) {
+	public Object startInstancia(String entrada) throws Exception {
 		Construtor construct = new Construtor();
 		Class<?> classT = construct.criaClasse(entrada);
 		Object obj = null;
@@ -16,9 +16,8 @@ public class Instancia {
 			obj = constT.newInstance();
 			return obj;
 		} catch (Exception e) {
-			System.out.println("Não foi possível instanciar a classe.");
+			throw new Exception("Não foi possível instanciar a classe.");
 		}
-		return null;
 	}
 
 }
