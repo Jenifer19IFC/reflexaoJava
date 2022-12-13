@@ -13,7 +13,7 @@ public class Construtor {
 						Class.forName("atividade."+classe.toString());
 				return classT;
 			}catch (Exception e) {
-				 throw new Exception("Classe " + classe.toString() + " não encontrada ou não existe.");
+				 throw new MyExceptionConstrutor("Classe " + classe.toString() + " não encontrada ou não existe.");
 			}
 	}
 	

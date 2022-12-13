@@ -16,7 +16,7 @@ public class Instancia {
 			obj = constT.newInstance();
 			return obj;
 		} catch (Exception e) {
-			throw new Exception("Não foi possível instanciar a classe.");
+			throw new MyExceptionInstancia("Não foi possível instanciar a classe.");
 		}
 	}
 
